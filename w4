@@ -1,4 +1,4 @@
--- Load ratings data
+3q)-- Load ratings data
 ratings = LOAD 'ratings.data' USING PigStorage('\t') AS (user_id:int, movie_id:int, rating:int, timestamp:int);
 
 -- Load movie data
@@ -18,3 +18,29 @@ most_popular_movie = LIMIT sorted_movies 1;
 
 -- Output the result
 DUMP most_popular_movie;
+
+
+
+
+
+
+2q)
+-- Load the input data
+input_data = LOAD 'input.txt' USING TextLoader() AS (line:chararray);
+
+-- Tokenize the text into words
+words = FOREACH input_data GENERATE FLATTEN(TOKENIZE(line)) AS word;
+
+-- Group the words by their values
+word_groups = GROUP words BY word;
+
+-- Count the occurrences of each word
+word_counts = FOREACH word_groups GENERATE group AS word, COUNT(words) AS count;
+
+-- Optionally, sort the word counts (uncomment this line if you want to sort)
+-- sorted_word_counts = ORDER word_counts BY count DESC;
+
+-- Store or output the results
+STORE word_counts INTO 'word_counts_output' USING PigStorage(',');
+-- Or: DUMP word_counts;
+
