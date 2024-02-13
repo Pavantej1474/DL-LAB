@@ -1,0 +1,20 @@
+-- Load ratings data
+ratings = LOAD 'ratings.data' USING PigStorage('\t') AS (user_id:int, movie_id:int, rating:int, timestamp:int);
+
+-- Load movie data
+movies = LOAD 'movies.item' USING PigStorage('|') AS (movie_id:int, title:chararray, release_date:chararray, video_release_date:chararray, imdb_url:chararray);
+
+-- Join movie data with ratings data
+joined_data = JOIN ratings BY movie_id, movies BY movie_id;
+
+-- Group by movie_id and count the number of ratings
+rating_counts = FOREACH (GROUP joined_data BY ratings::movie_id) GENERATE group AS movie_id, COUNT(joined_data) AS rating_count;
+
+-- Sort movies by rating count in descending order
+sorted_movies = ORDER rating_counts BY rating_count DESC;
+
+-- Get the top movie with the highest number of ratings
+most_popular_movie = LIMIT sorted_movies 1;
+
+-- Output the result
+DUMP most_popular_movie;
