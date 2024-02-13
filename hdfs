@@ -1,0 +1,73 @@
+cat input1.txt |python3 mapper2.py|sort|python3 reducer2.py
+  hdfs dfs -mkdir /bda4
+  137  hdfs dfs -ls
+  138  hdfs dfs -ls .
+  139  hdfs dfs -ls ./
+  140  hdfs dfs -ls bda4
+  141  jps
+  142  sudo nano r1.txt
+  143  sudo gedit r1.txt
+  144  pwd
+  145  hdfs dfs /home/hdoop/r1.txt /bda4
+  146  hdfs dfs -put /home/hdoop/r1.txt /bda4
+  147  ls
+  148  hdfs dfs -put /home/hdoop/r4.txt /bda4
+  149  hdfs dfs -rm r4.txt
+  150  rm r4.txt
+  151  l
+  152  hdfs dfs -get /bda4/r4.txt /home/hdoop/r4.txt
+  153  ls
+  154  hdfs dfs -copyFromLocal /home/hdoop/r4.txt /bda4
+  155  hdfs dfs -copyToLocal /bda4/r4.txt /home/hdoop/r4.txt
+  156  cls
+  157  clear
+  158  ls
+  159  mkdir bda4
+  160  ls
+  161  cd bda4
+  162  ls
+  163  hdfs dfs -mkdir bda
+  164  clear
+  165  hdfs dfs -mkdir /bda
+  166  ls
+  167  sudo nano f1.txt
+  168  ls
+  169  pwd
+  170  hdfs dfs -copyFromLocal /home/hdoop/bda4/f1.txt /bda
+  171  cat f1.txt
+  172  hdfs dfs -cat /bda/f1.txt
+  173  pwd
+  174  ls
+  175  hdfs dfs -copyFromLocal /home/hdoop/r4.txt /bda
+  176  hdfs dfs -copyToLocal /bda/r4.txt /home/hdoop/bda/f4.txt
+  177  hdfs dfs -copyToLocal /bda/r4.txt /home/hdoop/bda/
+  178  pwd
+  179  ls
+  180  hdfs dfs -copyToLocal /bda/r4.txt /home/hdoop/bda4/
+  181  ls
+  182  cd bda4
+  183  ls
+  184  hdfs dfs -touch /bda/f2.txt
+  185  hdfs dfs -cp /bda/f2.txt /bda4
+  186  hdfs dfs -mv /bda/f1.txt /bda4
+  187  hdfs dfs -du /bda
+  188  hdfs dfs -du[-h] /bda
+  189  hdfs dfs -du [-h] /bda
+  190  hdfs dfs -du -h  /bda
+  191  hdfs dfs -du -s -h /bda
+  192  hdfs dfs -setrep -R 5 /bda/f2.txt
+  193  hdfs dfs -ls  /bda
+  194  hdfs dfs -rm  /bda/r4.txt
+  195  hdfs dfs -chmod 777 /bda/f2.txt
+  196  hdfs dfs -checksum /bda/f2.txt
+  197  pwd
+  198  hdfs dfs -getmerge /bda4 /home/hdoop/bda
+  199  ls /home/hdoop/bda
+  200  lks
+  201  ls
+  202  cd bda
+  203  cat bda
+  204  hdfs dfs -gzip /bda4/f1.txt
+  205  hdfs dfs -gzip f1.txt
+  206  hdfs dfs -gzip/bda4/f1.txt
+  207  hdfs fsck /bda4/f1.txt -files -blocks -locations
