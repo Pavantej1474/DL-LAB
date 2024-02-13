@@ -1,0 +1,22 @@
+hello World
+I am in Lab 5
+hello 
+high 
+how 
+are you
+in
+welcome to bda
+Lightning is a natural phenomenon formed by electrostatic discharges through the atmosphere
+between two electrically charged regions, either both in the atmosphere or one in the atmosphere 
+and one on the ground, temporarily neutralizing these in a near-instantaneous release of an 
+average of between 200 megajoules and 7 gigajoules of energy, depending on the type. The three 
+main types of lightning are distinguished by where they occur: either inside a single 
+thundercloud (intra-cloud), between two clouds (cloud-to-cloud), or between a cloud and the 
+ground (cloud-to-ground), in which case it is referred to as a lightning strike. Lightning 
+causes thunder, a sound from the shock wave which develops as gases in the vicinity of the 
+discharge heat suddenly to very high temperatures. It is often heard a few seconds after the 
+lightning itself. Thunder is heard as a rolling, gradually dissipating rumble because the sound 
+from different portions of a long stroke arrives at slightly different times. This photograph 
+shows strokes of cloud-to-ground lightning hitting the Mediterranean Sea close to Port-la-
+Nouvelle in southern France.
+
